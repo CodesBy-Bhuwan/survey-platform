@@ -1,0 +1,52 @@
+
+services:
+
+  # ========================================
+  # Spring Boot Backend
+  # ========================================
+  backend:
+    build:
+      context: ./survey-backend
+      dockerfile: Dockerfile
+
+    container_name: survey-backend
+
+    ports:
+      - "5454:5454"
+
+    environment:
+      SERVER_PORT: 5454
+      SPRING_DATASOURCE_URL: jdbc:sqlite:/data/mydb.db
+
+    volumes:
+      - survey-db:/data
+
+    restart: unless-stopped
+
+
+  # ========================================
+  # React Frontend
+  # ========================================
+  frontend:
+    build:
+      context: ./survey-frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: /api
+
+    container_name: survey-frontend
+
+    ports:
+      - "5173:80"
+
+    depends_on:
+      - backend
+
+    restart: unless-stopped
+
+
+# ==========================================
+# Persistent SQLite database volume
+# ==========================================
+volumes:
+  survey-db:

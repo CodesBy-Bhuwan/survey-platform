@@ -117,7 +117,7 @@ function Dashboard() {
       {/* Dashboard heading */}
       <header className="dashboard-header">
         <div>
-          <h1>Survey Management Dashboard</h1>
+          <h1> Survey Dashboard</h1>
           <p>Manage your surveys and view their status.</p>
         </div>
 
