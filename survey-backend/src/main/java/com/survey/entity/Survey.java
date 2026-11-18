@@ -39,6 +39,18 @@ public class Survey {
 
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+    private String schemaJson;
+
+    public Survey() {
+    }
+
+    public Survey( String title, String description, String schemaJson) {
+//        this.id = UUID.fromString(id);
+        this.title = title;
+        this.description = description;
+        this.schemaJson = schemaJson;
+        this.status = SurveyStatus.DRAFT;
+    }
 
     @PrePersist
     protected void onCreate() {
@@ -52,6 +64,21 @@ public class Survey {
         updatedAt = LocalDateTime.now();
     }
 
-    public Survey() {
+    public void updateDetails(
+            String title,
+            String description,
+            String schemaJson
+    ) {
+        this.title = title;
+        this.description = description;
+        this.schemaJson = schemaJson;
+    }
+
+    public void publish() {
+        this.status = SurveyStatus.PUBLISHED;
+    }
+
+    public void close() {
+        this.status = SurveyStatus.CLOSED;
     }
 }

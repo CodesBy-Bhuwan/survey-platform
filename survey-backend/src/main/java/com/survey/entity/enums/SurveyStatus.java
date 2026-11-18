@@ -4,6 +4,5 @@ public enum SurveyStatus {
 
     DRAFT,
     PUBLISHED,
-    CLOSED,
-    ARCHIVED
+    CLOSED
 }
