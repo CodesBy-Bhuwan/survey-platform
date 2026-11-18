@@ -6,6 +6,8 @@ import com.survey.service.AnalyticsService;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/api/admin/surveys/{surveyId}/analytics")
 public class AnalyticsController {
@@ -18,7 +20,7 @@ public class AnalyticsController {
 
     @GetMapping
     public AnalyticsDto getAnalytics(
-            @PathVariable String surveyId
+            @PathVariable UUID surveyId
     ) {
 
         return analyticsService.getAnalytics(surveyId);
