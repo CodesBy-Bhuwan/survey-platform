@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/admin/surveys")
@@ -45,7 +46,7 @@ public class SurveyController {
     // Get a survey by ID
     @GetMapping("/{id}")
     public SurveyDto findById(
-            @PathVariable String id
+            @PathVariable UUID id
     ) {
 
         return surveyService.findById(id);
@@ -54,7 +55,7 @@ public class SurveyController {
     // Update a draft survey
     @PutMapping("/{id}")
     public SurveyDto update(
-            @PathVariable String id,
+            @PathVariable UUID id,
             @Valid @RequestBody UpdateSurveyReq request
     ) {
 
@@ -64,7 +65,7 @@ public class SurveyController {
     // Publish a survey
     @PatchMapping("/{id}/publish")
     public Map<String, String> publish(
-            @PathVariable String id
+            @PathVariable UUID id
     ) {
 
         surveyService.publish(id);
@@ -78,7 +79,7 @@ public class SurveyController {
     // Close a survey
     @PatchMapping("/{id}/close")
     public Map<String, String> close(
-            @PathVariable String id
+            @PathVariable UUID id
     ) {
 
         surveyService.close(id);
@@ -93,7 +94,7 @@ public class SurveyController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(
-            @PathVariable String id
+            @PathVariable UUID id
     ) {
 
         surveyService.delete(id);

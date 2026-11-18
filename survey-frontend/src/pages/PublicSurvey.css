@@ -1,0 +1,129 @@
+
+.public-survey-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.public-survey-header {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.public-survey-header h1 {
+  color: #1f2937;
+  margin-top: 0;
+}
+
+.public-survey-header p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.public-question-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.public-question-title {
+  display: block;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 18px;
+}
+
+.required-mark {
+  color: #dc2626;
+}
+
+.public-question-card textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.public-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  color: #374151;
+  cursor: pointer;
+}
+
+.public-option input,
+.rating-options input {
+  cursor: pointer;
+}
+
+.rating-options {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.rating-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.public-submit-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.public-submit-button:hover {
+  background: #1d4ed8;
+}
+
+.public-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.public-form-error,
+.error-message {
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.public-survey-message {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.success-message {
+  color: #166534;
+  background: #dcfce7;
+}
+
+@media (max-width: 600px) {
+  .public-survey-container {
+    margin: 15px auto;
+    padding: 12px;
+  }
+}

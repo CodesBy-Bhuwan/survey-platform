@@ -11,10 +11,7 @@ import com.survey.repo.SurveyResponseRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class AnalyticsService {
@@ -35,7 +32,7 @@ public class AnalyticsService {
     }
 
     @Transactional(readOnly = true)
-    public AnalyticsDto getAnalytics(String surveyId) {
+    public AnalyticsDto getAnalytics(UUID surveyId) {
 
         Survey survey = surveyService.getSurvey(surveyId);
 

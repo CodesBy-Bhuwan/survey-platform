@@ -1,0 +1,261 @@
+
+/* Main page layout */
+.survey-builder {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Page heading */
+.builder-header {
+  margin-bottom: 30px;
+}
+
+.builder-header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.builder-header p {
+  color: #6b7280;
+}
+
+/* Survey information section */
+.survey-info {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #e5e7eb;
+}
+
+.survey-info h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-size: 20px;
+}
+
+/* Input groups */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Questions section */
+.questions-section {
+  margin-bottom: 25px;
+}
+
+.questions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.questions-header h2 {
+  color: #1f2937;
+  font-size: 20px;
+}
+
+/* Add question button */
+.add-question-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-question-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Individual question card */
+.question-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+/* Question card header */
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.question-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #374151;
+}
+
+/* Question form elements */
+.question-card input,
+.question-card select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Required checkbox */
+.required-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: #374151;
+}
+
+.required-checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+/* Question action buttons */
+.question-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.question-actions button {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.question-actions button:hover {
+  background: #d1d5db;
+}
+
+.question-actions .remove-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.question-actions .remove-btn:hover {
+  background: #fecaca;
+}
+
+/* Bottom page actions */
+.builder-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.save-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #15803d;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .survey-builder {
+    margin: 15px auto;
+    padding: 12px;
+  }
+
+  .questions-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .builder-actions {
+    flex-direction: column;
+  }
+
+  .builder-actions button {
+    width: 100%;
+  }
+}
+
+/* Keep survey form fields vertically arranged */
+.survey-info .form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.survey-info .form-group input,
+.survey-info .form-group textarea {
+  width: 100%;
+}
+
+/* Error message */
+.error-message {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+/* Improve spacing between question count and editors */
+.questions-section > p {
+  color: #6b7280;
+  margin-bottom: 16px;
+}

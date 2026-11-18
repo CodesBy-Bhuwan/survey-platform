@@ -18,14 +18,18 @@ import java.util.UUID;
 )
 public class SurveyResponse {
 
+    // Response ID is a String containing a UUID.
     @Id
     @Column(length = 36, nullable = false, updatable = false)
     private String id;
 
+    // Each response belongs to one survey.
+    // The referenced Survey entity uses a UUID primary key.
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "survey_id", nullable = false)
     private Survey survey;
 
+    // Answers are stored as JSON text in SQLite.
     @Column(
             name = "answers_json",
             nullable = false,
@@ -40,20 +44,24 @@ public class SurveyResponse {
     )
     private LocalDateTime submittedAt;
 
+    // Required by JPA.
     protected SurveyResponse() {
     }
 
+    // Create a response for an existing survey.
     public SurveyResponse(Survey survey, String answersJson) {
         this.id = UUID.randomUUID().toString();
         this.survey = survey;
         this.answersJson = answersJson;
     }
 
+    // Automatically set submission time before inserting.
     @PrePersist
     protected void onCreate() {
         submittedAt = LocalDateTime.now();
     }
 
+    // Getters used by the service and API.
     public String getId() {
         return id;
     }

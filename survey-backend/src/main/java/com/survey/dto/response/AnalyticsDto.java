@@ -3,10 +3,11 @@ package com.survey.dto.response;
 
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 public record AnalyticsDto(
 
-        String surveyId,
+        UUID surveyId,
         long totalResponses,
         List<QuestionAnalytics> questions
 

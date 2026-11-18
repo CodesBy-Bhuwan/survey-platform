@@ -6,6 +6,8 @@ import com.survey.service.SurveyService;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/api/public/surveys")
 public class PublicSurveyController {
@@ -18,7 +20,7 @@ public class PublicSurveyController {
 
     @GetMapping("/{id}")
     public SurveyDto getPublishedSurvey(
-            @PathVariable String id
+            @PathVariable UUID id
     ) {
 
         return surveyService.toDto(
