@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 import type {
   CreateSurveyRequest,
   SurveyQuestion,
-  QuestionType,
 } from "../types/survey";
 
 import "./SurveyBuilder.css";
