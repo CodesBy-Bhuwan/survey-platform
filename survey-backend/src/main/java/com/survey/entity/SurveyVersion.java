@@ -1,4 +1,3 @@
-
 package com.survey.entity;
 
 import jakarta.persistence.*;
