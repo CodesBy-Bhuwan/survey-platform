@@ -10,6 +10,10 @@ The application uses SQLite as its database during development.
 
 ## Technology Stack
 
+What do we have inside:   
+- [Backend](./survey-backend/README.md)   
+- [Frontend](./survey-frontend/README.md)    
+
 | Technology         | Purpose                                   |
 | ------------------ | ----------------------------------------- |
 | Java 21            | Backend programming language              |
@@ -20,15 +24,35 @@ The application uses SQLite as its database during development.
 | SQLite             | Database management                       |
 | Maven              | Dependency management and project build   |
 | Jackson            | JSON processing and serialization         |
-| Jakarta Validation | Request validation                        |
+| Jakarta Validation | Request validation  
+
+### How the app look like?
+<div align="center">
+<details>
+<summary> Show screenshot</summary>
+
+![Dashboard](./images/Look.png)
+
+</details>
+
+  <a href="./survey-frontend/docs/ui.md">
+    <img src="https://github.com/CodesBy-Bhuwan/DevOps-Architecture/blob/main/devops-arch/arch-diagrams/screenshots/discover-project-transparent.png" alt="Discover the project" width="250">
+    <br>
+    <strong>👉 Click Here to See More! 👈</strong>
+  </a>
+</div>
+
+<br>
+
+
 
 # How to Run the Project
 
 There are three ways to run the Survey Management System:
 
-1. Using Dockerfiles (individual containers).
-2. Using Docker Compose.
-3. Running locally without Docker.
+1. [Using Dockerfiles (individual containers)](#1-run-using-dockerfiles).
+2. [Using Docker Compose](#2-run-using-docker-compose-recommended).
+3. [Running locally without Docker](#3-run-locally-without-docker).
 
 ## 1. Run Using Dockerfiles
 
